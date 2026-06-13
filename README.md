@@ -9,9 +9,10 @@
 - **Severity Score (Estimated CVSS):** 8.1 (High)
 
 ## Technical Summary
-An authenticated local user can manipulate front-end dynamic validation parameters (specifically the global state `gLoginUser = "0"` inside the browser memory context via live console tampering), entirely bypassing client-side authentication filters located within `xhr.js` and `util_global_vars.js`. 
+An authenticated local user can manipulate front-end dynamic validation parameters (specifically the global state `Vulnerability details are restricted to mitigate active risk.` inside the browser memory context via live console tampering), entirely bypassing client-side authentication filters located within `Vulnerability details are restricted to mitigate active risk.
+` and `Vulnerability details are restricted to mitigate active risk.`. 
 
-This exploitation chain forces the backend gateway to expose administrative sub-modules and leak the unencrypted master configuration bundle `device.xml` containing raw hardcoded cryptographic keys, granting full root-level administrative access. Additionally, the integrated web server responds to fragmented byte-range headers, leaving the core CPU susceptible to localized resource saturation and Denial of Service (DoS).
+This exploitation chain forces the backend gateway to expose administrative sub-modules and leak the unencrypted master configuration bundle `Vulnerability details are restricted to mitigate active risk.` containing raw hardcoded cryptographic keys, granting full root-level administrative access. Additionally, the integrated web server responds to fragmented byte-range headers, leaving the core CPU susceptible to localized resource saturation and Denial of Service (DoS).
 
 ## Cryptographic Proof & Integrity Lock
 To secure intellectual property and prevent retroactive modifications, the absolute sequential forensic bundle (containing step-by-step verification screenshots and text logs) has been cryptographically signed and anchored permanently to decentralized ledgers on **June 8, 2026**.
