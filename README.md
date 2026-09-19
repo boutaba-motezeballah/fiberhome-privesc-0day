@@ -18,18 +18,30 @@ Verification hash for the proof packet:
 ## Code Flow
 ```mermaid
 graph TD
-    A["<b style='color:#000000'>Web Interface Login</b>"] --> B["<b style='color:#000000'>Client-Side Check</b>"]
-    B --> C{"<b style='color:#000000'>gLoginUser Changed to 0</b>"}
-    C -->|Yes| D["<b style='color:#000000'>Admin Access Granted</b>"]
-    C -->|No| E["<b style='color:#000000'>Access Denied</b>"]
-    D --> F["<b style='color:#000000'>Download config.bin</b>"]
+    %% Base Styling
+    classDef default fill:#1f2937,stroke:#4b5563,stroke-width:2px,color:#f3f4f6;
+    classDef audit fill:#3b82f6,stroke:#1d4ed8,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef logic fill:#d97706,stroke:#b45309,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef secure fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff,font-weight:bold;
+    classDef flaw fill:#ef4444,stroke:#b91c1c,stroke-width:2px,color:#fff,font-weight:bold;
 
-    style A fill:#ffffff,stroke:#000000,stroke-width:2px
-    style B fill:#ffffff,stroke:#000000,stroke-width:2px
-    style C fill:#ffffff,stroke:#000000,stroke-width:2px
-    style D fill:#ffffff,stroke:#000000,stroke-width:2px
-    style E fill:#ffffff,stroke:#000000,stroke-width:2px
-    style F fill:#ffffff,stroke:#000000,stroke-width:2px
+    A[Firmware UI Engine<br>Client-Side Session Requests] -->|Request Validation Pipeline| B(Logical Boundary Layer)
+    
+    B -->|State Interruption Window| C{Race Condition Analysis}
+    
+    C -->|Flaw Detected| D[Session Boundary Interruption]
+    C -->|Unsanitized Routing| E[System-Level Interface Transition]
+    
+    D & E -->|Mitigation Assessment| F(Privilege Verification Mechanism)
+    
+    F -->|Remediation Implementation| G[Hardened Validation Gate<br>Server-Side Enforced]
+    G -->|Secure Environment| H[Least Privilege Execution Profiles]
+
+    %% Applying Classes
+    class A audit;
+    class B,C logic;
+    class G,H secure;
+    class D,E,F flaw;
 ```
 
 ---
