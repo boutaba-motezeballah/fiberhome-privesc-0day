@@ -18,7 +18,7 @@ Verification hash for the proof packet:
 ## Code Flow
 ```mermaid
 graph TD
-    classDef plain fill:#ffffff,stroke:#000000,stroke-width:1px,color:#000000;
+    classDef plain fill:#ffffff,stroke:#ffffff,stroke-width:1px,color:#000000;
 
     A[Web Interface Login] --> B(Client-Side Check)
     B --> C{gLoginUser Changed to 0}
