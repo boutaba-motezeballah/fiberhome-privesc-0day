@@ -24,12 +24,12 @@ graph TD
     C -->|No| E[Access Denied]
     D --> F[Download config.bin]
 
-    style A fill:#ffffff,stroke:#ffffff,color:#000000
-    style B fill:#ffffff,stroke:#ffffff,color:#000000
-    style C fill:#ffffff,stroke:#ffffff,color:#000000
-    style D fill:#ffffff,stroke:#ffffff,color:#000000
-    style E fill:#ffffff,stroke:#ffffff,color:#000000
-    style F fill:#ffffff,stroke:#ffffff,color:#000000
+    style A fill:#2d3748,stroke:#4a5568,color:#ffffff
+    style B fill:#2d3748,stroke:#4a5568,color:#ffffff
+    style C fill:#2d3748,stroke:#4a5568,color:#ffffff
+    style D fill:#2d3748,stroke:#4a5568,color:#ffffff
+    style E fill:#2d3748,stroke:#4a5568,color:#ffffff
+    style F fill:#2d3748,stroke:#4a5568,color:#ffffff
 ```
 
 ---
