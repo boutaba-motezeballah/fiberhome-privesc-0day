@@ -18,18 +18,18 @@ Verification hash for the proof packet:
 ## Code Flow
 ```mermaid
 graph TD
-    A[Web Interface Login] --> B(Client-Side Check)
-    B --> C{gLoginUser Changed to 0}
-    C -->|Yes| D[Admin Access Granted]
-    C -->|No| E[Access Denied]
-    D --> F[Download config.bin]
+    A["<b style='color:#000000'>Web Interface Login</b>"] --> B["<b style='color:#000000'>Client-Side Check</b>"]
+    B --> C{"<b style='color:#000000'>gLoginUser Changed to 0</b>"}
+    C -->|Yes| D["<b style='color:#000000'>Admin Access Granted</b>"]
+    C -->|No| E["<b style='color:#000000'>Access Denied</b>"]
+    D --> F["<b style='color:#000000'>Download config.bin</b>"]
 
-    style A fill:#2d3748,stroke:#4a5568,color:#ffffff
-    style B fill:#2d3748,stroke:#4a5568,color:#ffffff
-    style C fill:#2d3748,stroke:#4a5568,color:#ffffff
-    style D fill:#2d3748,stroke:#4a5568,color:#ffffff
-    style E fill:#2d3748,stroke:#4a5568,color:#ffffff
-    style F fill:#2d3748,stroke:#4a5568,color:#ffffff
+    style A fill:#ffffff,stroke:#000000,stroke-width:2px
+    style B fill:#ffffff,stroke:#000000,stroke-width:2px
+    style C fill:#ffffff,stroke:#000000,stroke-width:2px
+    style D fill:#ffffff,stroke:#000000,stroke-width:2px
+    style E fill:#ffffff,stroke:#000000,stroke-width:2px
+    style F fill:#ffffff,stroke:#000000,stroke-width:2px
 ```
 
 ---
