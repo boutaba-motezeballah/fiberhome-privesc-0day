@@ -17,7 +17,7 @@ Verification hash for the proof packet:
 
 ## Code Flow
 ```mermaid
-رgraph TD
+graph TD
     A[Web Interface Login] --> B(Client-Side Check)
     B --> C{gLoginUser Changed to 0}
     C -->|Yes| D[Admin Access Granted]
