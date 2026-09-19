@@ -18,11 +18,17 @@ Verification hash for the proof packet:
 ## Code Flow
 ```mermaid
 graph TD
+    classDef target fill:#2d3748,stroke:#4a5568,stroke-width:2px,color:#fff;
+    classDef alert fill:#e53e3e,stroke:#9b2c2c,stroke-width:2px,color:#fff;
+
     A[Web Interface Login] --> B(Client-Side Check)
     B --> C{gLoginUser Changed to 0}
     C -->|Yes| D[Admin Access Granted]
     C -->|No| E[Access Denied]
     D --> F[Download config.bin]
+
+    class A,B,C,D,E,F target;
+    class C alert;
 ```
 
 ---
