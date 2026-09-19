@@ -25,17 +25,17 @@ graph TD
     classDef secure fill:#10b981,stroke:#047857,stroke-width:2px,color:#fff,font-weight:bold;
     classDef flaw fill:#ef4444,stroke:#b91c1c,stroke-width:2px,color:#fff,font-weight:bold;
 
-    A[Firmware UI Engine<br>Client-Side Session Requests] -->|Request Validation Pipeline| B(Logical Boundary Layer)
+    A[Web Interface Login] --> B(Client-Side Check)
     
-    B -->|State Interruption Window| C{Race Condition Analysis}
+    B --> C{gLoginUser Changed to 0}
     
-    C -->|Flaw Detected| D[Session Boundary Interruption]
-    C -->|Unsanitized Routing| E[System-Level Interface Transition]
+    C -->|Yes| D[Admin Access Granted]
+    C -->|No| E[Access Denied]
     
-    D & E -->|Mitigation Assessment| F(Privilege Verification Mechanism)
+    D & E --> F[Check Session Status]
     
-    F -->|Remediation Implementation| G[Hardened Validation Gate<br>Server-Side Enforced]
-    G -->|Secure Environment| H[Least Privilege Execution Profiles]
+    F --> G[Download config.bin]
+    G --> H[Extract System Keys]
 
     %% Applying Classes
     class A audit;
